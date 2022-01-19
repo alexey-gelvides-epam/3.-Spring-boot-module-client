@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 @Accessors(chain = true)
-public class Visitor {
+public class Guest {
     private long id;
     private String name;
     private String lastName;
@@ -15,7 +15,7 @@ public class Visitor {
     private Date createdAt;
     private Date updatedAt;
 
-    public Visitor(String name, String lastName, String phone){
+    public Guest(String name, String lastName, String phone){
         this.name = name;
         this.lastName = lastName;
         this.phone = phone;

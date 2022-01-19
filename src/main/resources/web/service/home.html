@@ -17,20 +17,20 @@
                 <th>Registration Date</th>
                 <th>Editing Date</th>
             </tr>
-            <tr th:each="visitor : ${visitorList}">
-                <td th:utext="${visitor.getId()}"></td>
-                <td th:utext="${visitor.getName()}"></td>
-                <td th:utext="${visitor.getLastName()}"></td>
-                <td th:utext="${visitor.getPhone()}"></td>
-                <td th:utext="${visitor.getCreatedAt()}"></td>
-                <td th:utext="${visitor.getUpdatedAt()}"></td>
+            <tr th:each="guest : ${guestList}">
+                <td th:utext="${guest.getId()}"></td>
+                <td th:utext="${guest.getName()}"></td>
+                <td th:utext="${guest.getLastName()}"></td>
+                <td th:utext="${guest.getPhone()}"></td>
+                <td th:utext="${guest.getCreatedAt()}"></td>
+                <td th:utext="${guest.getUpdatedAt()}"></td>
                 <td>
-                    <form th:method="GET" th:action="@{edit-visitor/{id}(id=${visitor.getId()})}">
+                    <form th:method="GET" th:action="@{edit-guest/{id}(id=${guest.getId()})}">
                         <input type="submit" value="Edit">
                     </form>
                 </td>
                 <td>
-                    <form th:method="DELETE" th:action="@{delete/{id}(id=${visitor.getId()})}">
+                    <form th:method="DELETE" th:action="@{delete/{id}(id=${guest.getId()})}">
                         <input type="submit" value="Delete">
                     </form>
                 </td>
@@ -39,8 +39,8 @@
         <br>
         <br>
         <br>
-        <form th:method="GET" th:action="@{create-visitor}">
-            <input type="submit" value="Add new visitor">
+        <form th:method="GET" th:action="@{create-guest}">
+            <input type="submit" value="Add new guest">
         </form>
     </th:block>
 </div>
